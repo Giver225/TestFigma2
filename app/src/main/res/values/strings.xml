@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- startscreen strings -->
+
+	<string name="app_name">Page 1</string>
+	<string name="ek_img_content">ExportKit Image</string>
+	<string name="welcome_string">Добро пожаловать!</string>
+	<string name="registrationtext_string">Зарегистрироваться</string>
+	<string name="entertext_string">Войти</string>
+	<string name="mail_string">goverdovski_da@mail.ru</string>
+	<string name="qwerty123_string">qwerty123</string>
+	<string name="pog_champov_string">Pog Champov</string>
+	<string name="password_string">Пароль</string>
+	<string name="email_string">Email</string>
+	<string name="name_string">Имя</string>
+	<string name="registrationtext_ek1_string">Регистрация</string>
+	<string name="registration_ek3_string">Регистрация</string>
+	<string name="enterbtn_string"> </string>
+	<string name="mail_ek1_string">goverdovski_da@mail.ru</string>
+	<string name="qwerty123_ek1_string">qwerty123</string>
+	<string name="password_ek1_string">Пароль</string>
+	<string name="email_ek1_string">Email</string>
+	<string name="entertext_ek1_string">Войти</string>
+</resources>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bggradient">
+
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/menusvg" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/avatarpng" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_centerInParent="true"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="88dp"
+        android:text="Статус: Врач"
+        android:textColor="#FFFFFF"
+        android:textSize="17dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/rectangle_358xml" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status"
+        android:layout_alignParentStart="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="15dp"
+        android:text="Иванов иван Иванович"
+        android:textAlignment="center"
+        android:textColor="#5786A2"
+        android:textSize="17dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="39dp"
+        app:srcCompat="@drawable/rectangle_360" />
+
+    <FrameLayout
+        android:id="@+id/profile_frame"
+        android:layout_width="match_parent"
+        android:layout_height="488dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="-10dp" >
+
+        <fragment
+            android:id="@+id/data_fragment"
+            android:name="com.example.testfigma2.fragment_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </fragment>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/data_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="199dp"
+        android:background="#00FFFFFF"
+        android:onClick="data_fragment"
+        android:text="Данные"
+        android:textAllCaps="false"
+
+        android:textColor="#5786A2"
+        tools:ignore="UsingOnClickInXml" />
+
+    <Button
+        android:id="@+id/entry_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="199dp"
+        android:layout_marginEnd="59dp"
+        android:background="#00FFFFFF"
+        android:onClick="entry_fragment"
+        android:text="Записи"
+        android:textAllCaps="false"
+        android:textColor="#5786A2"
+        tools:ignore="UsingOnClickInXml" />
+
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/bg"
+	android:onClick="profile">
+
+
+	<Button
+		android:id="@+id/registration"
+		android:layout_width="180dp"
+		android:layout_height="56dp"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="61dp"
+		android:background="@drawable/rectangle_351_shape"
+		android:onClick="profile"
+		android:text="Войти"
+		android:textAllCaps="false"
+		android:textColor="#FFFFFF"
+		android:textSize="20sp"
+		tools:ignore="UsingOnClickInXml">
+
+	</Button>
+
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="402dp"
+		android:layout_alignParentBottom="true"
+		android:alpha="0.75"
+		android:background="@drawable/rectangle_353_shape">
+
+	</View>
+
+	<EditText
+		android:id="@+id/edit_login"
+		android:layout_width="297dp"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/edit_password"
+		android:layout_centerInParent="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="20dp"
+		android:hint="Логин"
+		android:textColor="#000000">
+
+	</EditText>
+
+	<EditText
+		android:id="@+id/edit_password"
+		android:layout_width="297dp"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/registration"
+
+		android:layout_centerHorizontal="true"
+		android:layout_marginBottom="85dp"
+		android:hint="Пароль"
+		android:textColor="#000000">
+
+	</EditText>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@+id/edit_login"
+		android:layout_centerInParent="true"
+
+		android:layout_marginBottom="29dp"
+		android:text="Вход"
+		android:textColor="#477B9C"
+		android:textSize="20sp">
+
+	</TextView>
+</RelativeLayout>
