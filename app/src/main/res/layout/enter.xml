@@ -29,6 +29,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="402dp"
 		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="-1dp"
 		android:alpha="0.75"
 		android:background="@drawable/rectangle_353_shape">
 
@@ -40,7 +41,6 @@
 		android:layout_height="wrap_content"
 		android:layout_above="@+id/edit_password"
 		android:layout_centerInParent="true"
-		android:layout_centerHorizontal="true"
 		android:layout_marginBottom="20dp"
 		android:hint="Логин"
 		android:textColor="#000000">

@@ -20,9 +20,19 @@ public class fragment_data extends Fragment {
     }
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        TextView text = (TextView) getView().findViewById(R.id.test_text);
+        ProfileActivity activity = (ProfileActivity) getActivity();
+        TextView login = (TextView) getView().findViewById(R.id.login_enter);
+        TextView phone = (TextView) getView().findViewById(R.id.phone_enter);
+        TextView male = (TextView) getView().findViewById(R.id.male_enter);
+        TextView date_of_birth = (TextView) getView().findViewById(R.id.date_enter);
+        TextView email = (TextView) getView().findViewById(R.id.email_enter);
+
 // загружаем текст
-        text.setText("здесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текстздесь должен быть длинный текст");
+        login.setText(activity.getLogin());
+        phone.setText(activity.getPhone());
+        male.setText(activity.getMale());
+        date_of_birth.setText(activity.getDate_of_birth());
+        email.setText(activity.getEmail());
         super.onViewCreated(view, savedInstanceState);
     }
 }

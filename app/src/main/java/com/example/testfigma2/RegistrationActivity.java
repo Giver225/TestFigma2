@@ -28,19 +28,30 @@ import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 
 public class RegistrationActivity extends AppCompatActivity{
-
-    public String urlWww = RESTapi.class.newInstance().urlWww;
-
+    RESTapi resTapi = new RESTapi();
+    public String urlWww = resTapi.getUrlWww();
+    String login_str;
+    String password_str;
+    String name_str;
+    String status_str;
+    String phone_str;
+    String male_str;
+    String date_of_birth_str;
+    String email_str;
     public RegistrationActivity() throws IllegalAccessException, InstantiationException {
     }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registration);
     }
+
+
+
     public String getJSON(String login,
                           String password,
                           String name, String status,
@@ -62,7 +73,11 @@ public class RegistrationActivity extends AppCompatActivity{
         }
         return bot.toString();
     }
+
+
+
     public void registration_post(View v){
+        Intent intent = new Intent(this, ProfileActivity.class);
         EditText login = findViewById(R.id.edit_login);
         EditText password = findViewById(R.id.edit_password);
         EditText email = findViewById(R.id.edit_email);
@@ -96,16 +111,33 @@ public class RegistrationActivity extends AppCompatActivity{
                     jsonReader.beginObject(); // Start processing the JSON object
                     while (jsonReader.hasNext()) { // Loop through all keys
                         String key = jsonReader.nextName(); // Fetch the next key
-                        if (key.equals("login")) { // Check if desired key
-                            // Fetch the value as a String
-                            String login_str = jsonReader.nextString();
-
-                            // Do something with the value
-                            // ...
-
-                            break; // Break out of the loop
-                        } else {
-                            jsonReader.skipValue(); // Skip values of other keys
+                        switch (key){
+                            case ("login"):
+                                login_str = jsonReader.nextString();
+                                break;
+                            case ("password"):
+                                password_str = jsonReader.nextString();
+                                break;
+                            case ("name"):
+                                name_str = jsonReader.nextString();
+                                break;
+                            case ("status"):
+                                status_str = jsonReader.nextString();
+                                break;
+                            case ("phone"):
+                                phone_str = jsonReader.nextString();
+                                break;
+                            case ("male"):
+                                male_str = jsonReader.nextString();
+                                break;
+                            case ("date_of_birth"):
+                                date_of_birth_str = jsonReader.nextString();
+                                break;
+                            case ("email"):
+                                email_str = jsonReader.nextString();
+                                break;
+                            default:
+                                jsonReader.skipValue();
                         }
                     }
                     if (myConnection.getResponseCode() == 200) {
@@ -119,17 +151,21 @@ public class RegistrationActivity extends AppCompatActivity{
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+
+                intent.putExtra("login", login_str);
+                intent.putExtra("password", password_str);
+                intent.putExtra("name", name_str);
+                intent.putExtra("status", status_str);
+                intent.putExtra("phone", phone_str);
+                intent.putExtra("male", male_str);
+                intent.putExtra("date_of_birth", date_of_birth_str);
+                intent.putExtra("email", email_str);
+                startActivity(intent);
             }
         });
-        Intent intent = new Intent(this, ProfileActivity.class);
-        intent.putExtra("login", login.getText().toString());
-        startActivity(intent);
-    }
-    public void goBack(View v){
-        Intent intent = new Intent(this, MainActivity.class);
 
-        startActivity(intent);
     }
+
 
 
 }
