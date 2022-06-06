@@ -72,8 +72,11 @@ public class EnterActivity extends AppCompatActivity{
                     InputStreamReader responseBodyReader =
                             new InputStreamReader(responseBody, "UTF-8");
 
+
                     JsonReader jsonReader = new JsonReader(responseBodyReader);
+                    Log.i("POZHALYUSTA", jsonReader.toString());
                     jsonReader.beginObject(); // Start processing the JSON object
+
                     while (jsonReader.hasNext()) { // Loop through all keys
                         String key = jsonReader.nextName(); // Fetch the next key
                         switch (key){
