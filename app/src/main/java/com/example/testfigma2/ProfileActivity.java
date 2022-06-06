@@ -2,6 +2,7 @@ package com.example.testfigma2;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
@@ -20,6 +22,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class ProfileActivity extends AppCompatActivity{
     FragmentManager fragmentManager = getSupportFragmentManager();
     RESTapi resTapi = new RESTapi();

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -12,29 +12,30 @@
 
 
         <TextView
-            android:id="@+id/doctor_entter"
+            android:id="@+id/doctor_enter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:text="Giver"/>
-        <Space
-            android:layout_width="20dp"
-            android:layout_height="match_parent"/>
+            android:layout_centerVertical="true"
+            android:text="Giver"
+            android:layout_centerInParent="true"
+            android:textSize="18dp" />
+
         <TextView
             android:id="@+id/patient_enter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:text="Kekis"/>
-        <Space
-            android:layout_width="20dp"
-            android:layout_height="match_parent"/>
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="5dp"
+            android:text="Kekis"
+            android:textSize="18dp" />
+
         <TextView
             android:id="@+id/time_enter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
             android:text="12:20"
-            />
-    </LinearLayout>
+            android:textSize="18dp" />
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

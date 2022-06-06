@@ -1,10 +1,47 @@
 package com.example.testfigma2;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Scanner;
+
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class RESTapi {
-    public String urlWww = "http://942c-188-126-60-135.ngrok.io/api/accounts/0";
+    
+    public String urlWww = "http://c0b2-188-126-60-135.ngrok.io/api/accounts/0";
+
+//    public RESTapi(){
+//        this.urlWww = "";
+//        FileReader in = null;
+//        try {
+//            in = new FileReader("url.txt");
+//            StringBuilder sb = new StringBuilder();
+//
+//            while(in.read() != -1) {
+//                sb.append(in.read());
+//            }
+//
+//            String contents = sb.toString();
+//            this.urlWww = contents;
+//            in.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//
+//    }
 
 
     public String getUrlWww(){

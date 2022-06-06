@@ -2,6 +2,7 @@ package com.example.testfigma2;
 
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
@@ -19,6 +21,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class EnterActivity extends AppCompatActivity{
 
     RESTapi resTapi = new RESTapi();
@@ -51,6 +54,7 @@ public class EnterActivity extends AppCompatActivity{
                 // Create URL
                 // Create connection
                 try {
+                    Log.i("123123123123", urlWww);
                     urlWww = urlWww.substring(0, urlWww.length() - 1);
                     urlWww = urlWww + loginView.getText().toString();
                     URL Endpoint = new URL(urlWww);

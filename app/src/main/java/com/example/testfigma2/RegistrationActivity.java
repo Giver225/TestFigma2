@@ -3,6 +3,7 @@ package com.example.testfigma2;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONException;
@@ -27,6 +29,7 @@ import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class RegistrationActivity extends AppCompatActivity{
     RESTapi resTapi = new RESTapi();
     public String urlWww = resTapi.getUrlWww();

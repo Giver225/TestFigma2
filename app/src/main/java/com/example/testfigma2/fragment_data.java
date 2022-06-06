@@ -1,11 +1,13 @@
 package com.example.testfigma2;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 public class fragment_data extends Fragment {
@@ -18,6 +20,7 @@ public class fragment_data extends Fragment {
 
         return inflater.inflate(R.layout.fragment_data, container, false);
     }
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         ProfileActivity activity = (ProfileActivity) getActivity();
