@@ -17,11 +17,13 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:text="Giver"
+            android:textColor="#003B5D"
             android:layout_centerInParent="true"
             android:textSize="18dp" />
 
         <TextView
             android:id="@+id/patient_enter"
+            android:textColor="#003B5D"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -31,6 +33,7 @@
 
         <TextView
             android:id="@+id/time_enter"
+            android:textColor="#003B5D"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"

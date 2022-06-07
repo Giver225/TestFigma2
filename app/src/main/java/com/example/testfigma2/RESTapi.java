@@ -22,27 +22,6 @@ public class RESTapi {
     
     public String urlWww = "http://c0b2-188-126-60-135.ngrok.io/api/accounts/0";
 
-//    public RESTapi(){
-//        this.urlWww = "";
-//        FileReader in = null;
-//        try {
-//            in = new FileReader("url.txt");
-//            StringBuilder sb = new StringBuilder();
-//
-//            while(in.read() != -1) {
-//                sb.append(in.read());
-//            }
-//
-//            String contents = sb.toString();
-//            this.urlWww = contents;
-//            in.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//
-//    }
-
 
     public String getUrlWww(){
         return this.urlWww;

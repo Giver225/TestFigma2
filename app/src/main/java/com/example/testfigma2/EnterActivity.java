@@ -58,10 +58,10 @@ public class EnterActivity extends AppCompatActivity{
                     urlWww = urlWww.substring(0, urlWww.length() - 1);
                     urlWww = urlWww + loginView.getText().toString();
                     URL Endpoint = new URL(urlWww);
-                    Log.i("PROSHELGOVNO", urlWww);
+                    Log.i("PROSHEL", urlWww);
                     HttpURLConnection myConnection =  (HttpURLConnection) Endpoint.openConnection();
-                    Log.i("PROSHELGOVNO", "sssssssssssssssssssssssssssssssssssssssssssssssss");
-                    Log.i("PROSHELGOVNO", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+                    Log.i("PROSHEL", "sssssssssssssssssssssssssssssssssssssssssssssssss");
+                    Log.i("PROSHEL", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 //                    myConnection.setDoOutput(true);
                     myConnection.setRequestMethod("GET");
                     myConnection.setRequestProperty("User-Agent", "my-rest-app-v0.1");
@@ -110,10 +110,10 @@ public class EnterActivity extends AppCompatActivity{
                     }
 
                 } catch (IOException e) {
-                    Log.i("PROSHELGOVNO", "2222222222222222222222222222");
+                    Log.i("PROSHEL", "2222222222222222222222222222");
                     e.printStackTrace();
                 }
-                Log.i("PROSHELGOVNO", "333333333333333333333333333333333333333");
+                Log.i("PROSHEL", "333333333333333333333333333333333333333");
                 if (right_password.equals(password.getText().toString())){
                     intent.putExtra("login", login);
                     intent.putExtra("password", right_password);
