@@ -20,7 +20,7 @@ import java.util.Scanner;
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class RESTapi {
     
-    public String urlWww = "http://c0b2-188-126-60-135.ngrok.io/api/accounts/0";
+    public String urlWww = "http://4ced-188-126-60-135.ngrok.io/api/accounts/0";
 
 
     public String getUrlWww(){

@@ -48,6 +48,7 @@ public class ProfileActivity extends AppCompatActivity{
         male = arguments.get("male").toString();
         date_of_birth = arguments.get("date_of_birth").toString();
         email = arguments.get("email").toString();
+
 //        TODO: загрузить данные в профиль
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
@@ -67,9 +68,15 @@ public class ProfileActivity extends AppCompatActivity{
         }
         if (status.equals("admin")){
             statusView.setText("Статус: Администратор");
+            View add_member = findViewById(R.id.add_member);
+            add_member.setVisibility(View.VISIBLE);
         }
 
 
+    }
+    public void new_member(View v){
+        Intent intent = new Intent(this, NewMemberActivity.class);
+        startActivity(intent);
     }
 
 

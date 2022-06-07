@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+
+    <Button
+        android:id="@+id/registration"
+        android:layout_width="255dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="61dp"
+        android:background="@drawable/rectangle_351_shape"
+        android:onClick="registration_post"
+        android:text="Зарегистрировать"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp">
+
+    </Button>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.75"
+        android:background="@drawable/rectangle_353_shape">
+
+    </View>
+
+    <EditText
+        android:id="@+id/edit_status"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edit_login"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:hint="Статус"
+        android:textColor="#000000">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/edit_login"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edit_password"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:hint="Логин"
+        android:textColor="#000000">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edit_email"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:hint="Пароль"
+        android:textColor="#000000">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/name"
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true"
+        android:hint="Email"
+        android:textColor="#000000">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:hint="ФИО"
+        android:textColor="#000000">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/registration"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:hint="Телефон"
+        android:textColor="#000000">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/male"
+        android:layout_centerInParent="true"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/phone"
+        android:layout_marginBottom="10dp"
+        android:hint="Пол"
+        android:textColor="#000000">
+
+    </EditText>
+
+    <EditText
+        android:layout_centerInParent="true"
+        android:id="@+id/date"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/male"
+        android:layout_marginBottom="10dp"
+        android:hint="Дата рождения"
+        android:textColor="#000000">
+
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edit_status"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="29dp"
+        android:text="Новый пользователь"
+        android:textColor="#477B9C"
+        android:textFontWeight="700"
+        android:textSize="20sp">
+
+    </TextView>
+</RelativeLayout>

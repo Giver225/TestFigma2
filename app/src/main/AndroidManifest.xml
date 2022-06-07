@@ -23,6 +23,7 @@
 		<activity android:name=".RegistrationActivity"></activity>
 		<activity android:name=".EnterActivity"></activity>
 		<activity android:name=".ProfileActivity"></activity>
+		<activity android:name=".NewMemberActivity"></activity>
 
 
 	</application>
